@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import SignInForm from "./SignInForm";
 import SignUpFrom from "./SignUpFrom";
 
-const Authentication = () => {
-  const [signUpModal, setSignUpModal] = useState(true);
-  const [signInModal, setSignInModal] = useState(false);
+const Authentication = (props) => {
+  const [signUpModal, setSignUpModal] = useState(props.signup);
+  const [signInModal, setSignInModal] = useState(props.signin);
 
   const handleModals = (e) => {
     if (e.target.id === "register") {
       setSignInModal(false);
       setSignUpModal(true);
     } else if (e.target.id === "login") {
-      setSignInModal(false);
-      setSignUpModal(true);
+      setSignUpModal(false);
+      setSignInModal(true);
     }
   };
 

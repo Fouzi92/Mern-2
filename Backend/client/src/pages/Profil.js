@@ -5,7 +5,7 @@ const Profil = () => {
   return (
     <div className="profil-page">
       <div className="log-container">
-        <Authentication />
+        <Authentication signin={false} signup={true} />
         <div className="img-container">
           <img src="./img/log.svg" alt="" />
         </div>
