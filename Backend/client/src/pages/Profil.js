@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Authentication from "../components/Log/Authentication";
+import { UidContext } from "../components/AppContext";
 
 const Profil = () => {
+  const uid = useContext;
   return (
     <div className="profil-page">
       <div className="log-container">
