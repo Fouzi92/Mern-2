@@ -5,6 +5,7 @@ import Profil from "./pages/Profil";
 import Trending from "./pages/Trending";
 import { UidContext } from "./components/AppContext";
 import axios from "axios";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   const [uid, setUid] = useState(null);
@@ -28,6 +29,7 @@ const App = () => {
   return (
     <UidContext.Provider value={uid}>
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profil" element={<Profil />} />
