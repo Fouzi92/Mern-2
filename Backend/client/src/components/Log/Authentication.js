@@ -17,8 +17,8 @@ const Authentication = (props) => {
   };
 
   return (
-    <div className="connection-from">
-      <div className="from-container">
+    <div className="connection-form">
+      <div className="form-container">
         <ul>
           <li onClick={handleModals} id="register">
             S'inscrire

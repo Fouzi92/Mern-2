@@ -1,4 +1,4 @@
-module.exports.signUpErros = (err) => {
+module.exports.signUpErrors = (err) => {
   let errors = { pseudo: "", email: "", password: "" };
 
   if (err.message.includes("pseudo"))
@@ -18,7 +18,7 @@ module.exports.signUpErros = (err) => {
   return errors;
 };
 
-module.exports.signInErros = (err) => {
+module.exports.signInErrors = (err) => {
   let errors = { email: "", password: "" };
 
   if (err.message.includes("email")) errors.email = "Email inconnu";
