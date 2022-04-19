@@ -19,7 +19,7 @@ export const UploadPicture = (data, id) => {
   return (dispatch) => {
     return axios
 
-      .post(`${process.env.REACT_APP_API_URL}api/user`, data)
+      .post(`${process.env.REACT_APP_API_URL}api/user/upload`, data)
       .then((res) => {
         return axios
           .get(`${process.env.REACT_APP_API_URL}api/user/${id}`)
@@ -34,7 +34,13 @@ export const UploadPicture = (data, id) => {
 export const updateBio = (userId, bio) => {
   return (dispatch) => {
     return axios({
-      method,
-    });
+      method: "put",
+      url: `${process.env.REACT_APP_API_URL}api/user/upload` + userId,
+      data: { bio },
+    })
+      .then((res) => {
+        dispatch({ type: UPDATE_BIO, payload: bio });
+      })
+      .catch((err) => console.log(err));
   };
 };

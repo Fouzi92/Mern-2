@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import LeftNav from "../LeftNav";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import UploadImg from "./UploadImg";
+import { updateBio } from "../../actions/user.actions";
 
 const UpdateProfil = () => {
   const [bio, setBio] = useState("");
   const [updateForm, setUpdateForm] = useState(false);
   const userData = useSelector((state) => state.userReducer);
+  const dispatch = useDispatch();
+
+  const handleUpdate = () => {
+    dispatch(updateBio(userData._id, bio));
+    setUpdateForm(false);
+  };
   return (
     <div className="profil-container">
       <LeftNav />
@@ -36,6 +43,7 @@ const UpdateProfil = () => {
                   defaultValue={userData.bio}
                   onChange={(e) => setBio(e.target.value)}
                 ></textarea>
+                <button onClick={handleUpdate}>Valider modications</button>
               </>
             )}
           </div>
