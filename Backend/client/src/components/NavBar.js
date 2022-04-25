@@ -12,7 +12,7 @@ const NavBar = () => {
     <nav>
       <div className="nav-container">
         <div className="logo">
-          <NavLink exact to="/">
+          <NavLink to="/" end>
             <div className="logo">
               <img src="./img/icon.png" alt="icon" />
               <h3>Raccoont</h3>
@@ -23,7 +23,7 @@ const NavBar = () => {
           <ul>
             <li></li>
             <li className="walcome">
-              <NavLink exact to="/profil">
+              <NavLink to="/profil" end>
                 <h5>Bienvenue {userData.pseudo}</h5>
               </NavLink>
             </li>
@@ -33,7 +33,7 @@ const NavBar = () => {
           <ul>
             <li></li>
             <li>
-              <NavLink exact to="/profil">
+              <NavLink to="/profil" end>
                 <img src="./img/icons/login.svg" alt="login" />
               </NavLink>
             </li>

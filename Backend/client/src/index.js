@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
+import { createRoot } from "react-dom/client";
 
 // dev tools
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -16,11 +17,11 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(thunk))
 );
 
-ReactDOM.render(
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
-  document.getElementById("root")
+    <App />
+  </Provider>
 );

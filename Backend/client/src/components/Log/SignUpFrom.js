@@ -17,8 +17,11 @@ const SignUpFrom = () => {
     const passwordConfirmError = document.querySelector(
       ".password-confirm.error"
     );
-    const termsError = document.querySelector(".terms.error");
+    const termsError = document.querySelector(".terms-error");
 
+    psdeudoError.innerHTML = "";
+    emailError.innerHTML = "";
+    passwordError.innerHTML = "";
     passwordConfirmError.innerHTML = "";
     termsError.innerHTML = "";
 
