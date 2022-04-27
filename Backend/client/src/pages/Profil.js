@@ -13,7 +13,7 @@ const Profil = () => {
         <div className="log-container">
           <Authentication signin={false} signup={true} />
           <div className="img-container">
-            <img src="./img/log.svg" alt="" />
+            <img src="./img/logo-mieleux.png" alt="" />
           </div>
         </div>
       )}

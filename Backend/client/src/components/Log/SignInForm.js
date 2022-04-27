@@ -56,6 +56,14 @@ const SignInForm = () => {
       <div className="password error"></div>
       <br />
       <input type="submit" value="Se connecter" />
+      <br />
+      <input type="checkbox" name="" id="terms" />
+      <label htmlFor="terms">
+        J'accepte les{" "}
+        <a href="http:/" target="_blank" rel="noopener noreferrer">
+          Rester connecté(e)
+        </a>
+      </label>
     </form>
   );
 };

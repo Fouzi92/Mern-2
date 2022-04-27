@@ -18,7 +18,7 @@
 
   .connection-form {
     border: none;
-    background: $color-4;
+    background: yellow;
     min-width: 490px;
     width: 90%;
     text-align: center;
@@ -86,14 +86,17 @@
           margin: 0;
           font-size: 1.2rem;
           font-family: $font-2;
-          border-radius: 20px;
+          border-radius: 0px;
+          background-color: rgb(240, 239, 239);
+          border: 5px solid rgb(22, 54, 231);
+          
 
           &:focus {
             box-shadow: 0 0 3px rgba(51, 51, 51, 0.2);
           }
         }
         a {
-          color: rgb(62, 62, 214);
+          color: rgb(255, 217, 0);
         }
       }
     }
@@ -103,12 +106,14 @@
     margin: 10px 0 6px;
   }
   .img-container {
+    position: absolute;
+    top: -40%;
     display: grid;
     align-items: center;
     height: 100%;
 
     img {
-      height: 280px;
+      height: 80px;
 
       @media screen and(max-width: 1050px) {
         height: 220px;
